@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Geolocation Data</h1>
+<table class='table'>
+ <tr>
+     <th>ID</th>
+     <th>Name</th>
+     <th>Lat_Degree</th>
+     <th>Lat_Minute</th>
+     <th>Lat_Seconds</th>
+     <th>Lat_Direction</th>
+     <th>Long_Degree</th>
+     <th>Long_Minute</th>
+     <th>Long_Seconds</th>
+     <th>Long_Direction</th>
+     <th>LAT</th>
+     <th>LONG</th>
+     <th>Altitude</th>
+ </tr>
+ {% for data in geodata %}
+   <tr>
+        <td>{{ data.id }}</a></td>
+        <td>{{ data.geoname }}</td>
+        <td> {{ data.latdegree }}</td>
+        <td> {{ data.latminute }}</td>
+        <td> {{ data.latsecond }}</td>
+        <td> {{ data.latdirection }}</td>
+        <td> {{ data.longdegree }}</td>
+        <td> {{ data.longminute }}</td>
+        <td> {{ data.longsecond }}</td>
+        <td> {{ data.longdirection }}</td>
+        <td> {{ data.latitude }}</td>
+        <td> {{ data.longitude }}</td>
+        <td> {{ data.altitude }}</td>
+    </tr>
+ {% endfor %}
+
+</table>
+
+{% endblock %}
